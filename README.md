@@ -60,6 +60,12 @@ test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 ✨  Done in 65.51s.
 ```
 
+### astar-collatorでローカルノードを動かす方法
+
+```bash
+cd astar && ./astar-collator --dev
+```
+
 ## refference
 
 1. [WASM Smart Contract Workshop](https://github.com/hoonsubin/wasm-workshop-amsterdot2022)
@@ -67,3 +73,4 @@ test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 3. [【Zenn】[できた]ASTAR Network(local)上に Ink! を使って RUST製 smart contract をデプロイ](https://zenn.dev/polonity/articles/ddffad4663a04e)
 4. [polkadot.js Explorer](https://polkadot.js.org/apps/#/explorer)
 5. [polkadot.js docs](https://polkadot.js.org/docs/api/start/api.tx.subs)
+6. [【Qita】Substrateインストールの方法](https://qiita.com/SotaWatanabe/items/f0c460bffa700b5a39de)
