@@ -74,3 +74,4 @@ cd astar && ./astar-collator --dev
 4. [polkadot.js Explorer](https://polkadot.js.org/apps/#/explorer)
 5. [polkadot.js docs](https://polkadot.js.org/docs/api/start/api.tx.subs)
 6. [【Qita】Substrateインストールの方法](https://qiita.com/SotaWatanabe/items/f0c460bffa700b5a39de)
+7. [Ionic docs](https://ionicframework.com/docs/ja/api/input)
