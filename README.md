@@ -76,3 +76,5 @@ cd astar && ./astar-collator --dev
 6. [【Qita】Substrateインストールの方法](https://qiita.com/SotaWatanabe/items/f0c460bffa700b5a39de)
 7. [Ionic docs](https://ionicframework.com/docs/ja/api/input)
 8. [ReactのuseStateでTypeScriptの型を複数指定する方法 useState();](https://off.tokyo/blog/react-usestate-typescript/)
+9. [ShibuyaにデプロイしたERC20コントラクト](https://contracts-ui.substrate.io/contract/XbWd99FgTZscva4Fmz9B2a7zFUDh5PhDFFCPYmCBzjVL1As)
+19. [Substrate理解への第一歩：ink!によるコントラクト開発・Ethereumとの違い](https://recruit.gmo.jp/engineer/jisedai/blog/develop-substrate-contract-by-ink/)

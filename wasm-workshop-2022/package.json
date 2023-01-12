@@ -7,6 +7,7 @@
     "@ionic/react": "^6.0.0",
     "@ionic/react-router": "^6.0.0",
     "@polkadot/api": "^8.1.1",
+    "@polkadot/api-contract": "^9.11.1",
     "@polkadot/extension-dapp": "^0.44.8",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
@@ -41,9 +42,9 @@
   "scripts": {
     "start": "ionic serve",
     "build": "react-scripts build",
-    "build:contract": "cd contracts/ink && cargo +nightly contract build",
+    "build:contract": "cd contracts/test && cargo +nightly contract build",
     "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!(@ionic/react|@ionic/react-router|@ionic/core|@stencil/core|ionicons)/)'",
-    "test:contract": "cd contracts/ink && cargo +nightly test",
+    "test:contract": "cd contracts/test && cargo +nightly test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
