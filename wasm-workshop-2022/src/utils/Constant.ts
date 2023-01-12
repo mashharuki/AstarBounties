@@ -12,4 +12,4 @@ export const RPOVIDER_URL = 'ws://127.0.0.1:9944';
 // export const RPOVIDER_URL = "ws://astar.public.blastapi.io";
 
 /* Contract address */
-export const CONTRACT_ADDRESS = "";
+export const CONTRACT_ADDRESS = "WoMTHHpSKRMcoW1Szb68DWQfh5d3tSCmHsWxM9i2rGeoMbe";
