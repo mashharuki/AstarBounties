@@ -12,7 +12,7 @@ export const getNodeInfo = async() => {
     // get provider
     const provider = new WsProvider(RPOVIDER_URL);
     // Create the API and wait until ready
-    const api = await ApiPromise.create({ provider });
+    const api = await ApiPromise.create({ provider: provider });
     // Retrieve the chain & node information information via rpc calls
     const [
         chain, 
@@ -33,7 +33,8 @@ export const getNodeInfo = async() => {
         nodeName, 
         nodeVersion,
         consts,
-        header
+        header,
+        api
     };
 };
 

@@ -4,6 +4,11 @@ interface ContainerProps {
   name: string;
 }
 
+/**
+ * ExploreContainer component
+ * @param param0 
+ * @returns 
+ */
 const ExploreContainer: React.FC<ContainerProps> = ({ name }) => {
   return (
     <div className="container">

@@ -6,7 +6,7 @@
     "@capacitor/core": "3.4.3",
     "@ionic/react": "^6.0.0",
     "@ionic/react-router": "^6.0.0",
-    "@polkadot/api": "^8.1.1",
+    "@polkadot/api": "^9.9.1",
     "@polkadot/api-contract": "^9.11.1",
     "@polkadot/extension-dapp": "^0.44.8",
     "@testing-library/jest-dom": "^5.11.9",

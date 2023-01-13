@@ -79,3 +79,4 @@ cd astar && ./astar-collator --dev
 9. [ShibuyaにデプロイしたERC20コントラクト](https://contracts-ui.substrate.io/contract/XbWd99FgTZscva4Fmz9B2a7zFUDh5PhDFFCPYmCBzjVL1As)
 19. [Substrate理解への第一歩：ink!によるコントラクト開発・Ethereumとの違い](https://recruit.gmo.jp/engineer/jisedai/blog/develop-substrate-contract-by-ink/)
 20. [【Github】!ink contract sample](https://github.com/mashharuki/ink/tree/master/examples)
+21. [【Github】wasm-showcase-dapps](https://github.com/AstarNetwork/wasm-showcase-dapps)

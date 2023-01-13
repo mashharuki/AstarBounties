@@ -6,7 +6,7 @@ interface AccountProps {
 }
 
 /**
- * Account Coponent
+ * Account Component
  * @param param0 
  * @returns 
  */

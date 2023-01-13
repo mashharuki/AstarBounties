@@ -7,6 +7,12 @@ import {
 import { useState } from 'react';
 import './Tab1.css';
 import Account from '../../components/Acconut';
+import { ApiPromise } from '@polkadot/api';
+import { ContractPromise } from "@polkadot/api-contract";
+import { 
+  CONTRACT_ADDRESS,
+} from './../../utils/Constant';
+import abi from "./../../contract/metadata.json";
 
 /**
  * Tab1 Component
@@ -15,6 +21,7 @@ import Account from '../../components/Acconut';
 const Tab1: React.FC = () => {
   const [accountName, setAccountName] = useState<string | null>();
   const [address, setAddress] = useState<string | null>();
+  const [api, setApi] = useState<any>();
 
   /**
    * clickAction
@@ -26,7 +33,8 @@ const Tab1: React.FC = () => {
       nodeName, 
       nodeVersion, 
       consts,
-      header
+      header,
+      api
     } = await getNodeInfo();
 
     console.log("chain:", chain.toString());
@@ -34,6 +42,8 @@ const Tab1: React.FC = () => {
     console.log("nodeVersion:", nodeVersion.toString());
     console.log("consts:", consts);
     console.log(`last block #${header.number} has hash ${header.hash}`);
+
+    setApi(api);
   } 
 
   /**
@@ -67,6 +77,24 @@ const Tab1: React.FC = () => {
     setAddress(accounts?.address);
   };
 
+  /**
+   * clickAction4
+   */
+  const clickAction4 = async () => {
+    // create contract object
+    const contract = new ContractPromise(api!, abi, CONTRACT_ADDRESS);
+    // call getMessageList function
+    const { result } = await contract.query.get(
+      "",
+      {
+            value: 0,
+            gasLimit: -1,
+      },
+    );
+
+    console.log("result:", result.isBasic);
+  };
+
   return (
     <IonPage>
       <IonHeader>
@@ -95,6 +123,11 @@ const Tab1: React.FC = () => {
           onClick={clickAction3}
         >
           Connect Wallet
+        </IonButton>
+        <IonButton
+          onClick={clickAction4}
+        >
+          Get Fliper
         </IonButton>
       </IonContent>
     </IonPage>
