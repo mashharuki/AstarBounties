@@ -7,12 +7,12 @@ import {
 import { useState } from 'react';
 import './Tab1.css';
 import Account from '../../components/Acconut';
-import { ApiPromise } from '@polkadot/api';
 import { ContractPromise } from "@polkadot/api-contract";
 import { 
   CONTRACT_ADDRESS,
 } from './../../utils/Constant';
 import abi from "./../../contract/metadata.json";
+import { InjectedAccountWithMeta } from "@polkadot/extension-inject/types";
 
 /**
  * Tab1 Component
@@ -20,8 +20,10 @@ import abi from "./../../contract/metadata.json";
  */
 const Tab1: React.FC = () => {
   const [accountName, setAccountName] = useState<string | null>();
-  const [address, setAddress] = useState<string | null>();
+  const [actingAccount, setActingAccount] = useState<InjectedAccountWithMeta>();
+  const [address, setAddress] = useState<any>();
   const [api, setApi] = useState<any>();
+  const [flip, setFlip] = useState<Boolean>();
 
   /**
    * clickAction
@@ -75,6 +77,7 @@ const Tab1: React.FC = () => {
 
     setAccountName(accounts?.meta.name);
     setAddress(accounts?.address);
+    setActingAccount(accounts);
   };
 
   /**
@@ -93,6 +96,37 @@ const Tab1: React.FC = () => {
     );
 
     console.log("result:", result.isBasic);
+    setFlip(result.isBasic);
+  };
+
+  /**
+   * clickAction5
+   */
+  const clickAction5 = async () => {
+    const { web3FromSource } = await import("@polkadot/extension-dapp");
+    // create contract object
+    const contract = new ContractPromise(api!, abi, CONTRACT_ADDRESS);
+    const injector = await web3FromSource(actingAccount!.meta.source.toString());
+
+    const singer: any = injector.signer;
+
+    // call flip function
+    const tx = await contract.tx.flip({ 
+      value: 0,
+      gasLimit: 18850000000,
+    });
+    
+    if (injector !== undefined) {
+      tx.signAndSend(
+        address,
+        {
+          signer: singer
+        },
+        (result) => {}
+      );
+    };
+
+    await clickAction4();
   };
 
   return (
@@ -128,6 +162,11 @@ const Tab1: React.FC = () => {
           onClick={clickAction4}
         >
           Get Fliper
+        </IonButton>
+        <IonButton
+          onClick={clickAction5}
+        >
+          Flip
         </IonButton>
       </IonContent>
     </IonPage>
