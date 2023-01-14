@@ -80,3 +80,5 @@ cd astar && ./astar-collator --dev
 19. [Substrate理解への第一歩：ink!によるコントラクト開発・Ethereumとの違い](https://recruit.gmo.jp/engineer/jisedai/blog/develop-substrate-contract-by-ink/)
 20. [【Github】!ink contract sample](https://github.com/mashharuki/ink/tree/master/examples)
 21. [【Github】wasm-showcase-dapps](https://github.com/AstarNetwork/wasm-showcase-dapps)
+22. [!ink Playground](https://ink-playground.substrate.io/?id=9230e11fc09945ac2cdc928d53cfbfdd)
+23. [【Github】ink-workshop](https://github.com/mashharuki/ink-workshop)
