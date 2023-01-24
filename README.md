@@ -1,7 +1,9 @@
 # AstarBounties
+
 Astar bounties during hackathons.
 
 Hackathons with Astar
+
 - <s>Tokyo web3 Hackathon</s>
 - <s>Polkadot Hackathon Latam</s>
 - <s>Cal Hacks 9.0</s>
@@ -9,8 +11,8 @@ Hackathons with Astar
 - <s>amsterDOT</s>
 - <s>NA Hackathon Polkadot</s>
 
-
 ## AmsterDOT
+
 You can view the presentation during AmsterDOT.io here:
 https://docs.google.com/presentation/d/1SC7LZPo8XspRkah5l4hk15kA3QToohrXRTQlafP4DEo/edit?usp=sharing
 
@@ -37,7 +39,7 @@ Your contract artifacts are ready. You can find them in:
 ✨  Done in 392.43s.
 ```
 
-## WASM  contract test command
+## WASM contract test command
 
 ```bash
 yarn test:contract
@@ -60,30 +62,50 @@ test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 ✨  Done in 65.51s.
 ```
 
-### astar-collatorでローカルノードを動かす方法
+### astar-collator でローカルノードを動かす方法
 
 ```bash
 cd astar && ./astar-collator --dev
+```
+
+### sample ディレクトリにあるコントラクトをデプロイする方法
+
+```bash
+swanky contract compile flipper -v
+swanky contract deploy flipper --account alice --gas 100000000000 --args true --network shibuya
+```
+
+- result
+
+```bash
+✔ Initialising OK
+✔ Getting WASM OK
+⠹ Connecting to node2023-01-24 21:31:16        API/INIT: RPC methods not decorated: transaction_unstable_submitAndWatch, transaction_unstable_unwatch
+✔ Connecting to node OK
+✔ Deploying OK
+✔ Writing config OK
+Contract deployed!
+Contract address: XNxU8kt9VJmoshkvfpxSuTFnnpr1Hy2Gw7Gg1mNrVyVmrxS
 ```
 
 ## refference
 
 1. [WASM Smart Contract Workshop](https://github.com/hoonsubin/wasm-workshop-amsterdot2022)
 2. [ionic docs](https://ionicframework.com/docs/components)
-3. [【Zenn】[できた]ASTAR Network(local)上に Ink! を使って RUST製 smart contract をデプロイ](https://zenn.dev/polonity/articles/ddffad4663a04e)
+3. [【Zenn】[できた]ASTAR Network(local)上に Ink! を使って RUST 製 smart contract をデプロイ](https://zenn.dev/polonity/articles/ddffad4663a04e)
 4. [polkadot.js Explorer](https://polkadot.js.org/apps/#/explorer)
 5. [polkadot.js docs](https://polkadot.js.org/docs/api/start/api.tx.subs)
-6. [【Qita】Substrateインストールの方法](https://qiita.com/SotaWatanabe/items/f0c460bffa700b5a39de)
+6. [【Qita】Substrate インストールの方法](https://qiita.com/SotaWatanabe/items/f0c460bffa700b5a39de)
 7. [Ionic docs](https://ionicframework.com/docs/ja/api/input)
-8. [ReactのuseStateでTypeScriptの型を複数指定する方法 useState();](https://off.tokyo/blog/react-usestate-typescript/)
-9. [ShibuyaにデプロイしたERC20コントラクト](https://contracts-ui.substrate.io/contract/XbWd99FgTZscva4Fmz9B2a7zFUDh5PhDFFCPYmCBzjVL1As)
-19. [Substrate理解への第一歩：ink!によるコントラクト開発・Ethereumとの違い](https://recruit.gmo.jp/engineer/jisedai/blog/develop-substrate-contract-by-ink/)
-20. [【Github】!ink contract sample](https://github.com/mashharuki/ink/tree/master/examples)
-21. [【Github】wasm-showcase-dapps](https://github.com/AstarNetwork/wasm-showcase-dapps)
-22. [!ink Playground](https://ink-playground.substrate.io/?id=9230e11fc09945ac2cdc928d53cfbfdd)
-23. [【Github】ink-workshop](https://github.com/mashharuki/ink-workshop)
-24. [OpenBrush](https://openbrush.io/)
-25. [【Qita】OpenBrushでSmartContract開発](https://qiita.com/oggata/items/a557acd7bb4571caf0b6)
-26. [【Github】openbrush](https://github.com/Supercolony-net/openbrush-contracts)
-27. [【Github】polkadot_js_examples](https://github.com/realtakahashi/polkadot_js_examples)
-
+8. [React の useState で TypeScript の型を複数指定する方法 useState();](https://off.tokyo/blog/react-usestate-typescript/)
+9. [Shibuya にデプロイした ERC20 コントラクト](https://contracts-ui.substrate.io/contract/XbWd99FgTZscva4Fmz9B2a7zFUDh5PhDFFCPYmCBzjVL1As)
+10. [Substrate 理解への第一歩：ink!によるコントラクト開発・Ethereum との違い](https://recruit.gmo.jp/engineer/jisedai/blog/develop-substrate-contract-by-ink/)
+11. [【Github】!ink contract sample](https://github.com/mashharuki/ink/tree/master/examples)
+12. [【Github】wasm-showcase-dapps](https://github.com/AstarNetwork/wasm-showcase-dapps)
+13. [!ink Playground](https://ink-playground.substrate.io/?id=9230e11fc09945ac2cdc928d53cfbfdd)
+14. [【Github】ink-workshop](https://github.com/mashharuki/ink-workshop)
+15. [OpenBrush](https://openbrush.io/)
+16. [【Qita】OpenBrush で SmartContract 開発](https://qiita.com/oggata/items/a557acd7bb4571caf0b6)
+17. [【Github】openbrush](https://github.com/Supercolony-net/openbrush-contracts)
+18. [【Github】polkadot_js_examples](https://github.com/realtakahashi/polkadot_js_examples)
+19. [【Github】Flipper: WASM dApp for Astar](https://github.com/AstarNetwork/wasm-flipper)
