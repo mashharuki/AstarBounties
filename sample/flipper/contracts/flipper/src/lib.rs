@@ -2,6 +2,9 @@
 
 use ink_lang as ink;
 
+/**
+ * flipper contract
+ */
 #[ink::contract]
 mod flipper {
 
