@@ -22,6 +22,9 @@ WASM対応のNFT Dapp開発用のプロダクトです。
 
 ![](./docs/imgs/%E7%8F%BE%E7%8A%B6.drawio.png)
 
+## Astar Learning Dappの想定フロー
+![](./docs/imgs/flow.png)
+
 ## デモ動画
 
 [https://youtu.be/Db8KYhhMUsI](https://youtu.be/Db8KYhhMUsI)
